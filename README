@@ -1,0 +1,23 @@
+Dieses Projekt basiert auf dem folgenden Tutorial:
+https://www.digitalocean.com/community/tutorials/how-to-automate-jenkins-setup-with-docker-and-jenkins-configuration-as-code
+
+
+
+ docker build -t jenkins .
+
+In der ersten Iteration habe ich das Problem gehabt, dass der folgende Aufruf deprecated war. 
+
+  RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
+
+ Auf der folgenden Seite_: https://github.com/jenkinsci/docker/blob/master/README.md#usage-1
+ habe ich die Lösung gefunden und dieses dann eingebaut. 
+
+  RUN jenkins-plugin-cli -f /usr/share/jenkins/ref/plugins.txt
+
+Zur Neuerstellung des Image muss ich das folgende eingeben:
+ docker build -t jenkins:jcasc .
+
+ Zum Starten muss ich diesen Befehl ausführen:
+  docker run --name jenkins --rm -p 8080:8080 jenkins:jcasc
+
+Großartig, ich habe jetzt einen Jenkins in meinen Docker am Laufen, dass heißt auf dieser Instanz kann ich nun frei rumspielen ohne mir Sorgen zu machen, dass ich etwas kaputt mache :)
