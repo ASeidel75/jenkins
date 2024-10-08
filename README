@@ -18,6 +18,12 @@ Zur Neuerstellung des Image muss ich das folgende eingeben:
  docker build -t jenkins:jcasc .
 
  Zum Starten muss ich diesen Befehl ausführen:
-  docker run --name jenkins --rm -p 8080:8080 jenkins:jcasc
+  docker run --name jenkins --rm -p 8080:8080 --env JENKINS_ADMIN_ID=admin --env JENKINS_ADMIN_PASSWORD=password jenkins:jcasc
+
+Nachdem ich das Tutorial weiter durchgelesen habe weiß nun auch, wie ich das Benutzeranlegen überspringen kann.
 
 Großartig, ich habe jetzt einen Jenkins in meinen Docker am Laufen, dass heißt auf dieser Instanz kann ich nun frei rumspielen ohne mir Sorgen zu machen, dass ich etwas kaputt mache :)
+
+Ich sollte als nächstes noch einmal prüfen, was so ab Kapitel 5 passiert.
+
+
