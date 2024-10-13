@@ -26,4 +26,18 @@ Großartig, ich habe jetzt einen Jenkins in meinen Docker am Laufen, dass heißt
 
 Ich sollte als nächstes noch einmal prüfen, was so ab Kapitel 5 passiert.
 
+Es gibt zahlreiche veraltete Einträge, die angepasst werden müssten:
+Hier ist zum Beispiel eins für authentification: 
+
+https://github.com/jenkinsci/matrix-auth-plugin/blob/master/src/test/resources/org/jenkinsci/plugins/matrixauth/integrations/casc/configuration-as-code-v3.yml
+
+Aber eigentlcih würde ich jetzt erst einmal gerne einen Job ins Leben rufen....
+
+Von dieser Seite habe ich nun ein Funktionierendes Beispiel:
+https://github.com/jenkinsci/configuration-as-code-plugin/blob/master/demos/jobs/pipeline.yaml
+
+Allerdings startet er den Job nicht, da ich Scripte Approven muss. Ich muss mal schauen, wie dieses Konfigurierbar ist. 
+
+Ich habe keine Ahnung, wie ich den Fehler beheben soll. Ich höre jetzt erst einmal auf, da ich einen SChritt weiter gekommen bin. 
+
 

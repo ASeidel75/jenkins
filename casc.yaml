@@ -15,8 +15,29 @@ security:
     authenticators:
     - global:
         strategy: triggeringUsersAuthorizationStrategy
+  globalJobDslSecurityConfiguration:
+    useScriptSecurity: false
 unclassified:
   location:
     url: http://127.0.0.1:8080/
 jobs:
-  - script:
+  - script: >
+      folder('testjobs')
+  - script: >
+      pipelineJob('testjobs/default-agent') {
+        definition {
+          cps {
+            script("""\
+              pipeline {
+                agent any
+                stages {
+                  stage ('test') {
+                    steps {
+                      echo "hello"
+                    }
+                  }
+                }
+              }""".stripIndent())
+          }
+        }
+      }
