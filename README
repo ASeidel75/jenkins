@@ -40,4 +40,10 @@ Allerdings startet er den Job nicht, da ich Scripte Approven muss. Ich muss mal 
 
 Ich habe keine Ahnung, wie ich den Fehler beheben soll. Ich höre jetzt erst einmal auf, da ich einen SChritt weiter gekommen bin. 
 
+Ich mache jetzt erst einmal weiter und schaue, ob ich nicht einen Build-Agent automatischen erzeugen kann. 
+
+Eine interessante Anleitung haben ich hier gefunden:
+https://tomgregory.com/jenkins/using-jenkins-configuration-as-code-to-setup-aws-slave-agents-automatically/
+
+Werde ich mir die nächsten Tage mal anschauen. 
 
